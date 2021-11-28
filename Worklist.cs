@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace RIS.Models.VWModels
 {
     public class VMRISWorklist
     {
+        [JsonProperty("ProcId")]
         public int ProcId { get; set; }
+
+        [JsonProperty("PatientId")]
         public string PatientId { get; set; }
         public string AccessionNumber { get; set; }
         public string StudyInstanceUid { get; set; }
